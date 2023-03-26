@@ -6,10 +6,12 @@
   ],
   "branchPrefix": "renovate/",
   "minor": {
-    "automerge": true
+    "automerge": true,
+    "automergeType": "branch"
   },
   "patch": {
-    "automerge": true
+    "automerge": true,
+    "automergeType": "branch"
   },
   "dependencyDashboard": true,
   "addLabels": [
