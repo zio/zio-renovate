@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "ignorePaths": [
+    ".github/workflows/ci.yml",
+    "examples/**"
+  ],
+  "branchPrefix": "renovate/",
+  "minor": {
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "dependencyDashboard": true,
+  "addLabels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "zio-sbt-website"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "sbt docs/generateReadme"
+        ],
+        "fileFilters": [
+          "README.md"
+        ],
+        "executionMode": "branch"
+      }
+    },
+    {
+      "matchPackageNames": [
+        "zio-sbt-ci"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "sbt ciGenerateGithubWorkflow"
+        ],
+        "fileFilters": [
+          "README.md"
+        ],
+        "executionMode": "branch"
+      }
+    }
+  ]
+}
