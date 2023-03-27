@@ -5,19 +5,22 @@
     "examples/**"
   ],
   "branchPrefix": "renovate/",
-  "minor": {
-    "automerge": true,
-    "automergeType": "branch"
-  },
-  "patch": {
-    "automerge": true,
-    "automergeType": "branch"
-  },
+  "platformAutomerge": true,
   "dependencyDashboard": true,
   "addLabels": [
     "dependencies"
   ],
   "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automergeType": "branch",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automergeType": "branch",
+      "automerge": true
+    },
     {
       "matchPackageNames": [
         "zio-sbt-website"
