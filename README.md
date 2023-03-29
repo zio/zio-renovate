@@ -1,8 +1,10 @@
-# ZIO Renovate
+# ZIO Renovate Config
 
 This repository contains a shared Renovate configuration for ZIO ecosystem projects. It is intended to be used by projects that are part of the ZIO ecosystem.
 
-By using this shared configuration, projects will automatically receive updates to their dependencies as they are released. This will help ensure that projects are always using the latest versions of their dependencies, and will help ensure that projects are not using any dependencies that have been deprecated or are no longer maintained.
+By using this shared configuration, projects will automatically receive updates to their dependencies as new versions of their dependencies are released.
+
+This will help ensure that projects are always using the latest versions of their dependencies, and not using any dependencies that have been deprecated or are no longer maintained.
 
 For more information about Renovate, see the [Renovate documentation](https://docs.renovatebot.com/).
 
@@ -31,6 +33,6 @@ To use this shared configuration, add the following line to your `renovate.json`
 
 ```json
 {
-  "extends": ["github>zio/zio-renovate:renovate"]
+  "extends": ["github>zio/zio-renovate-config:renovate"]
 }
 ```
