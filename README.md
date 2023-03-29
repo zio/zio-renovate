@@ -12,7 +12,7 @@ For more information about Renovate, see the [Renovate documentation](https://do
 
 We tried to make Renovate less noisy by enabling "automerge" for all patch and minor updates. We also changed the automerge type to "branch", which means that Renovate will automatically create a branch (instead of creating a PR) and wait for the CI to pass. If the CI passes, the branch will be merged into the default branch. If the CI fails, Renovate will create a PR for the branch and wait for manual intervention.
 
-To make sure that the CI is always run when a new branch is created, you need to enable "create" event:
+To make sure that the CI is always run when a new branch is created, you need to enable "create" events in your Github workflow, e.g. `.github/workflows/ci.yml`:
 
 ```diff
  'on':
@@ -22,7 +22,7 @@ To make sure that the CI is always run when a new branch is created, you need to
      - published
    push:
      branches:
-     - master
+     - main 
    pull_request: {}
 +  create: {}
 ```
