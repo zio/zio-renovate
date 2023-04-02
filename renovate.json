@@ -7,7 +7,7 @@
   "rebaseWhen": "behind-base-branch",
   "platformAutomerge": true,
   "dependencyDashboard": true,
-  "addLabels": [
+  "labels": [
     "dependencies"
   ],
   "packageRules": [
