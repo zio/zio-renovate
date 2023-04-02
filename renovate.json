@@ -4,6 +4,7 @@
     ".github/workflows/ci.yml"
   ],
   "branchPrefix": "renovate/",
+  "rebaseWhen": "behind-base-branch",
   "platformAutomerge": true,
   "dependencyDashboard": true,
   "addLabels": [
@@ -11,7 +12,8 @@
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
       "automergeType": "branch",
       "automerge": true
     },
